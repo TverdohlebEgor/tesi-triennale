@@ -8,5 +8,3 @@ __pycache__
 *.sqlite3
 *.bz2
 *.graphml
-
-data/gossip/*
