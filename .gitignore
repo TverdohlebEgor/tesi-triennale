@@ -1,3 +1,12 @@
 .direnv
 .envrc
 __pycache__
+.ipynb_checkpoints/
+
+*.csv
+*.parquet
+*.sqlite3
+*.bz2
+*.graphml
+
+data/gossip/*
