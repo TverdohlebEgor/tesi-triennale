@@ -19,7 +19,8 @@ def timemachine():
 @click.argument("dataset", type=DatasetFile())
 @click.argument("timestamp", type=int, required=False)
 @click.option('--fmt', type=click.Choice(['dot', 'gml', 'graphml', 'json'], case_sensitive=False))
-def restore(dataset, timestamp=None, fmt='dot'):
+@click.option('--no-pruning', is_flag=True, default=False, help="Disable pruning of stale channels.")
+def restore(dataset, timestamp=None, fmt='dot', no_pruning=False):
     """Restore reconstructs the network topology at a specific time in the past.
 
     Restore replays gossip messages from a dataset and reconstructs
@@ -104,25 +105,26 @@ def restore(dataset, timestamp=None, fmt='dot'):
             }
 
     # Cleanup pass: drop channels that haven't seen an update in 2 weeks
-    todelete = []
-    for scid, chan in tqdm(channels.items(), desc="Pruning outdated channels"):
-        if chan["timestamp"] < cutoff:
-            todelete.append(scid)
-        else:
-            node = nodes.get(chan["source"], None)
-            if node is None:
-                continue
+    if(not no_pruning):
+        todelete = []
+        for scid, chan in tqdm(channels.items(), desc="Pruning outdated channels"):
+            if chan["timestamp"] < cutoff:
+                todelete.append(scid)
             else:
-                node["out_degree"] += 1
-            node = nodes.get(chan["destination"], None)
-            if node is None:
-                continue
-            else:
-                node["in_degree"] += 1
-
-    for scid in todelete:
-        del channels[scid]
-
+                node = nodes.get(chan["source"], None)
+                if node is None:
+                    continue
+                else:
+                    node["out_degree"] += 1
+                node = nodes.get(chan["destination"], None)
+                if node is None:
+                    continue
+                else:
+                    node["in_degree"] += 1
+    
+        for scid in todelete:
+            del channels[scid]
+    
     nodes = [n for n in nodes.values() if n["in_degree"] > 0 or n['out_degree'] > 0]
 
     if len(channels) == 0:
