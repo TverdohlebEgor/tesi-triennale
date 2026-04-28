@@ -2,9 +2,8 @@
 
 **Tesi triennale di Egor Tverdohleb**
 
-Questo repository contiene il lavoro per la mia tesi triennale, incentrata sullo studio strutturale del **Lightning Network**. In questa fase iniziale, l'obiettivo principale è prendere familiarità con gli strumenti di analisi e i dataset. 
-
-Per fare ciò, ho fatto riferimento al lavoro del collega Samoggia e, similmente al suo approccio, ho estratto i dati dal repository originale di cui questo progetto è un fork. I risultati finali includono la generazione di grafici sull'evoluzione temporale della rete (come il coefficiente di clustering) utilizzando **Matplotlib** su dati strutturati tramite **igraph**.
+Questo repository contiene il lavoro per la mia tesi triennale, incentrata sullo studio strutturale del **Lightning Network**. 
+Ho fatto riferimento al lavoro del collega Samoggia e, similmente al suo approccio, ho estratto i dati dal repository originale di cui questo progetto è un fork. I risultati finali includono la generazione di grafici sull'evoluzione temporale della rete (come il coefficiente di clustering) utilizzando **Matplotlib** su dati strutturati tramite **igraph**.
 
 ## Come utilizzare il codice
 
@@ -33,6 +32,15 @@ pip3 install -r requirements.txt
 | [gossip-20210908.gsp.bz2](https://storage.googleapis.com/lnresearch/gossip-20210908.gsp.bz2) | `0ba0b31c12c4aec7f1255866acef485e239d54dedde99f4905cf869ec57804c1` | |
 | [gossip-20220823.gsp.bz2](https://storage.googleapis.com/lnresearch/gossip-20220823.gsp.bz2) | `cb260b0d7d3633db3b267256e43b974d1ecbcd403ab559a80f5e80744578777d` | |
 | [gossip-20230924.gsp.bz2](https://storage.googleapis.com/lnresearch/gossip-20230924.gsp.bz2) | `b6298fea4dd468e9f6857ab844993363143515b18f9e8c8278f33c601c058e78` | 35'984'848 |
+
+## Estrazione dei file .graphml
+I dati scaricati sono versioni compresse dei messaggi del protocollo gossip utilizzati dalla Lightning Network, i quali contengono informazioni dettagliate sullo scambio di dati e sugli annunci all'interno della rete.
+Per ricostruire la topologia della rete, è stato utilizzato lo script lntopo/timemachine.py (presente nella repository sorgente dei dati), che permette di simulare la crescita della rete a partire dai messaggi di gossip fino a uno specifico momento storico.
+Originariamente, lo script applicava un meccanismo di pruning per eliminare i canali considerati troppo datati. Tuttavia, poiché questa funzione generava criticità nella ricostruzione di snapshot relativi a date meno recenti, ho modificato il codice per consentire la disattivazione del pruning tramite un apposito flag. Grazie a questa modifica, i file .graphml ottenuti rappresentano l'intera topologia della rete senza perdite di dati.
+Il processo è automatizzato nel file convert.sh. Di seguito la sintassi utilizzata per invocare la timemachine
+```python3
+    python3 -m lntopo timemachine restore [INPUT] [TIMESTAMP] --fmt graphml --no-pruning > [OUTPUT]
+```
 
 ## Esecuzione
 
