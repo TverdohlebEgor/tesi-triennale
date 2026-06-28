@@ -1,0 +1,66 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {section}{\numberline {1}Introduzione}{5}{section.1}%
+\contentsline {section}{\numberline {2}Metriche Topologiche e Metodologia di Analisi}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Distribuzione dei Gradi ($P(k)$)}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Average Neighbor Degree ($AND$)}{9}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Clustering Coefficient ($CC$)}{10}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Network Centralization ($NC$)}{10}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Componenti Connesse}{11}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Betweenness Centrality ($BC$)}{11}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Small World Check}{12}{subsection.2.7}%
+\contentsline {subsection}{\numberline {2.8}Formalizzazione del Modello a Grafo}{12}{subsection.2.8}%
+\contentsline {subsection}{\numberline {2.9}Sorgente dei Dati e Ingestione tramite Google BigQuery}{13}{subsection.2.9}%
+\contentsline {subsection}{\numberline {2.10}Analisi Temporale per Snapshot Annuali}{13}{subsection.2.10}%
+\contentsline {subsection}{\numberline {2.11}Libreria igraph, Pre-filtraggio e Gestione della Dimensione dei Grafi}{13}{subsection.2.11}%
+\contentsline {subsection}{\numberline {2.12}Pipeline di Calcolo delle Metriche con Python igraph}{14}{subsection.2.12}%
+\contentsline {subsection}{\numberline {2.13}Approssimazione della Betweenness Centrality tramite NetworKit}{15}{subsection.2.13}%
+\contentsline {subsection}{\numberline {2.14}Campionamento Bidirezionale Stocastico dell'Average Path Length}{15}{subsection.2.14}%
+\contentsline {section}{\numberline {3}Risultati Relativi a Bitcoin (BTC)}{17}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Introduzione Storica}{17}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Analisi delle Metriche e Discussione dei Plot}{18}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Distribuzione dei Gradi e Proprietà Scale-Free}{18}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Average Neighbor Degree ($AND$)}{19}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Clustering Coefficient ($CC$)}{20}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Network Centralization ($NC$)}{20}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Componenti Connesse}{21}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}Betweenness Centrality ($BC$)}{22}{subsubsection.3.2.6}%
+\contentsline {subsubsection}{\numberline {3.2.7}Small World Check}{23}{subsubsection.3.2.7}%
+\contentsline {subsection}{\numberline {3.3}Conclusioni e Comparazione}{23}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Risultati Relativi a Ethereum (ETH)}{24}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Introduzione Storica}{24}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Analisi delle Metriche e Discussione dei Plot}{25}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Distribuzione dei Gradi e Topologia}{25}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Average Neighbor Degree ($AND$)}{26}{subsubsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Clustering Coefficient ($CC$)}{27}{subsubsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.4}Network Centralization ($NC$)}{28}{subsubsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.5}Componenti Connesse}{28}{subsubsection.4.2.5}%
+\contentsline {subsubsection}{\numberline {4.2.6}Betweenness Centrality ($BC$)}{29}{subsubsection.4.2.6}%
+\contentsline {subsubsection}{\numberline {4.2.7}Small World Check}{30}{subsubsection.4.2.7}%
+\contentsline {subsection}{\numberline {4.3}Conclusioni e Comparazione}{30}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Risultati Relativi a Litecoin (LTC)}{32}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Introduzione Storica}{32}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Analisi delle Metriche e Discussione dei Plot}{33}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Distribuzione dei Gradi}{33}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Average Neighbor Degree ($AND$)}{34}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Clustering Coefficient ($CC$)}{34}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Network Centralization ($NC$)}{35}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.5}Componenti Connesse}{36}{subsubsection.5.2.5}%
+\contentsline {subsubsection}{\numberline {5.2.6}Betweenness Centrality ($BC$)}{37}{subsubsection.5.2.6}%
+\contentsline {subsubsection}{\numberline {5.2.7}Small World Check}{38}{subsubsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.3}Conclusioni e Comparazione}{38}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Risultati Relativi a Dogecoin (DOGE)}{39}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Introduzione Storica}{39}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Analisi delle Metriche e Discussione dei Plot}{40}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Distribuzione dei Gradi}{40}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Average Neighbor Degree ($AND$)}{41}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Clustering Coefficient ($CC$) ed Esplosione delle Clique}{42}{subsubsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.4}Network Centralization ($NC$)}{43}{subsubsection.6.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.5}Componenti Connesse}{43}{subsubsection.6.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.6}Betweenness Centrality ($BC$)}{44}{subsubsection.6.2.6}%
+\contentsline {subsubsection}{\numberline {6.2.7}Small World Check}{45}{subsubsection.6.2.7}%
+\contentsline {subsection}{\numberline {6.3}Conclusioni e Comparazione}{45}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Discussione e Comparazione dei Risultati}{47}{section.7}%
+\contentsline {section}{\numberline {8}Conclusioni}{50}{section.8}%
+\contentsline {paragraph}{Limiti dello studio.}{51}{section.8}%
+\contentsline {paragraph}{Sviluppi futuri.}{51}{section.8}%

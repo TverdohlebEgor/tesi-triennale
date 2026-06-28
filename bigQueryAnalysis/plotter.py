@@ -10,6 +10,7 @@ import os
 import time
 import math
 import random
+import csv
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -17,7 +18,7 @@ BLOCKCHAINS = {
     "bitcoin":  [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
     "ethereum": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025],
     # BigQuery non conteneva dati significativa per Dogecoin 2025
-    "dogecoin": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024]
+    "dogecoin": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024],
     "litecoin": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
 }
 
@@ -78,6 +79,14 @@ def compute_apl_sampled(g_ig, apl_sample=APL_SAMPLE, apl_targets=APL_TARGETS):
     return np.mean(all_dists) if all_dists else float('nan')
 
 
+def save_csv(path, header, rows):
+    with open(path, "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(header)
+        w.writerows(rows)
+    log(f"  Saved {path}")
+
+
 def plot_temporal(results, key, ylabel, title, fname, destination):
     plt.figure(figsize=(9, 5))
     styles = {
@@ -97,6 +106,7 @@ def plot_temporal(results, key, ylabel, title, fname, destination):
     plt.title(title)
     plt.ylabel(ylabel)
     plt.xlabel("Year")
+    plt.ylim(bottom=0)
     plt.legend(title="Category", loc='best')
     plt.grid(True, linestyle='-', alpha=0.4)
     plt.tight_layout()
@@ -148,9 +158,21 @@ for blockchain, years in BLOCKCHAINS.items():
         log(f"  No data for {blockchain}, skipping plots.")
         continue
 
+    temporal_rows = []
+    for cat in categories:
+        r = results[cat]
+        for i, d in enumerate(r["dates"]):
+            temporal_rows.append([cat, d.year, r["and"][i], r["acc"][i], r["nc"][i], r["comp"][i]])
+    save_csv(
+        os.path.join(destination, "temporal_metrics.csv"),
+        ["category", "year", "and", "acc", "nc", "comp"],
+        temporal_rows,
+    )
+
     log(f"  Plotting degree distribution...")
     plt.figure(figsize=(7, 5))
     degs = g_full_last.degree()
+    save_csv(os.path.join(destination, "degree_distribution.csv"), ["degree"], [[d] for d in degs])
     if degs != None and len(degs) > 0 and max(degs) > 0:
         bins = np.logspace(0, np.log10(max(degs)), 50)
         plt.hist(degs, bins=bins, density=True, color='#4e79a7', alpha=0.7, edgecolor='black')
@@ -165,6 +187,8 @@ for blockchain, years in BLOCKCHAINS.items():
 
     log(f"  Calculating betweenness centrality (NetworKit ApproxBetweenness, epsilon=0.1)...")
     sample_degs, bet = compute_betweenness_nk(g_full_last, SAMPLE_SIZE)
+    save_csv(os.path.join(destination, "degree_betweenness.csv"),
+             ["degree", "betweenness"], zip(sample_degs, bet))
 
     plt.figure(figsize=(7, 5))
     plt.scatter(sample_degs, bet, alpha=0.6, color='blue', s=20)
@@ -187,6 +211,10 @@ for blockchain, years in BLOCKCHAINS.items():
     log(f"  APL real:   {apl:.4f}")
     log(f"  APL random: {apl_random:.4f}")
     log(f"  CC:         {cc:.4f}")
+
+    save_csv(os.path.join(destination, "small_world.csv"), ["metric", "value"],
+             [["apl_real", apl], ["apl_random", apl_random],
+              ["clustering_coefficient", cc], ["n", n], ["m", m]])
 
     plt.figure(figsize=(7, 5))
     metrics = [f"APL real\n(s={APL_SAMPLE}×{APL_TARGETS})", "APL random\n(theoretical)", "Clustering\nCoefficient"]

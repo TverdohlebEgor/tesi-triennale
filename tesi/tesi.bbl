@@ -1,0 +1,150 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global/global}
+    \entry{BarabasiAlbert1999}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=15bacd7ddfc866c5dd96976d4b0244d5}{%
+           family={Barabási},
+           familyi={B\bibinitperiod},
+           given={Albert-László},
+           giveni={A\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=d85e8d2b76e8626b1a45373f4e027914}{%
+           family={Albert},
+           familyi={A\bibinitperiod},
+           given={Réka},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4063d5171bad9750494dbdb05406431}
+      \strng{fullhash}{b4063d5171bad9750494dbdb05406431}
+      \strng{fullhashraw}{b4063d5171bad9750494dbdb05406431}
+      \strng{bibnamehash}{b4063d5171bad9750494dbdb05406431}
+      \strng{authorbibnamehash}{b4063d5171bad9750494dbdb05406431}
+      \strng{authornamehash}{b4063d5171bad9750494dbdb05406431}
+      \strng{authorfullhash}{b4063d5171bad9750494dbdb05406431}
+      \strng{authorfullhashraw}{b4063d5171bad9750494dbdb05406431}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5439}
+      \field{title}{Emergence of Scaling in Random Networks}
+      \field{volume}{286}
+      \field{year}{1999}
+      \field{pages}{509\bibrangedash 512}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.286.5439.509
+      \endverb
+    \endentry
+    \entry{Brandes2001}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=392b457d9bac1ed69366176e7857d7e9}{%
+           family={Brandes},
+           familyi={B\bibinitperiod},
+           given={Ulrik},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{392b457d9bac1ed69366176e7857d7e9}
+      \strng{fullhash}{392b457d9bac1ed69366176e7857d7e9}
+      \strng{fullhashraw}{392b457d9bac1ed69366176e7857d7e9}
+      \strng{bibnamehash}{392b457d9bac1ed69366176e7857d7e9}
+      \strng{authorbibnamehash}{392b457d9bac1ed69366176e7857d7e9}
+      \strng{authornamehash}{392b457d9bac1ed69366176e7857d7e9}
+      \strng{authorfullhash}{392b457d9bac1ed69366176e7857d7e9}
+      \strng{authorfullhashraw}{392b457d9bac1ed69366176e7857d7e9}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Mathematical Sociology}
+      \field{number}{2}
+      \field{title}{A Faster Algorithm for Betweenness Centrality}
+      \field{volume}{25}
+      \field{year}{2001}
+      \field{pages}{163\bibrangedash 177}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1080/0022250X.2001.9990249
+      \endverb
+    \endentry
+    \entry{CoinMarketCap}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=a9039156ed524ee6f72d9d61b715da48}{%
+           family={{CoinMarketCap}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9039156ed524ee6f72d9d61b715da48}
+      \strng{fullhash}{a9039156ed524ee6f72d9d61b715da48}
+      \strng{fullhashraw}{a9039156ed524ee6f72d9d61b715da48}
+      \strng{bibnamehash}{a9039156ed524ee6f72d9d61b715da48}
+      \strng{authorbibnamehash}{a9039156ed524ee6f72d9d61b715da48}
+      \strng{authornamehash}{a9039156ed524ee6f72d9d61b715da48}
+      \strng{authorfullhash}{a9039156ed524ee6f72d9d61b715da48}
+      \strng{authorfullhashraw}{a9039156ed524ee6f72d9d61b715da48}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://coinmarketcap.com}}
+      \field{note}{Consultato il 13 giugno 2026}
+      \field{title}{Cryptocurrency Historical Data}
+      \field{year}{2026}
+    \endentry
+    \entry{MagnaniMarzolla2026}{incollection}{}{}
+      \name{author}{2}{}{%
+        {{hash=515e2eb0c45d461898a35546269464c1}{%
+           family={Magnani},
+           familyi={M\bibinitperiod},
+           given={Matteo},
+           giveni={M\bibinitperiod}}}%
+        {{hash=888b58de49d1acfcbb9891241ac55f70}{%
+           family={Marzolla},
+           familyi={M\bibinitperiod},
+           given={Moreno},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{5dc75598eb7d64531f363c4a5054356a}
+      \strng{fullhash}{5dc75598eb7d64531f363c4a5054356a}
+      \strng{fullhashraw}{5dc75598eb7d64531f363c4a5054356a}
+      \strng{bibnamehash}{5dc75598eb7d64531f363c4a5054356a}
+      \strng{authorbibnamehash}{5dc75598eb7d64531f363c4a5054356a}
+      \strng{authornamehash}{5dc75598eb7d64531f363c4a5054356a}
+      \strng{authorfullhash}{5dc75598eb7d64531f363c4a5054356a}
+      \strng{authorfullhashraw}{5dc75598eb7d64531f363c4a5054356a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Encyclopedia of Social Network Analysis and Mining}
+      \field{title}{Path-based and Whole Network Measures}
+      \field{year}{2026}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
