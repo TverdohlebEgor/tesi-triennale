@@ -159,7 +159,8 @@ Lo script `plotter.py` scarica direttamente dal mio ambiente Google Cloud i file
 
 L'analisi delle metriche strutturali ha sollevato nuove sfide computazionali:
 
-* **Average Path Length (APL)**: Necessaria per verificare l'ipotesi di rete *small-world*, l'APL richiede la costruzione in memoria di una matrice completa $Nodi \times Archi$. Con milioni di record, questo rappresenta un notevole collo di bottiglia. Il calcolo è stato quindi approssimato campionando una porzione del grafo; grazie al filtro applicato a monte nella query, il sotto-grafo elaborato in memoria è costituito unicamente da nodi topologicamente "utili".
+* **Average Path Length (APL)**: Necessaria per verificare l'ipotesi di rete *small-world*, l'APL richiede la costruzione in memoria di una matrice completa $Nodi \times Archi$. Con milioni di record, questo rappresenta un notevole collo di bottiglia. Il calcolo è stato quindi approssimato campionando una porzione del grafo.
+  
 * **Betweenness Centrality**: Dinamiche simili si applicano al calcolo della centralità. Per aggirare i limiti computazionali, questa metrica è stata calcolata avvalendosi di **NetworKit**, una libreria esterna ad alte prestazioni. NetworKit fornisce un algoritmo ottimizzato che sfrutta il parallelismo multicore della CPU e tollera un margine di errore impostabile (parametro $\epsilon$, mantenuto a `0.1` per questo studio).
 
 I risultati delle analisi sotto forma di grafici sono salvati nella directory `bigQueryAnalysis/plots/`.
