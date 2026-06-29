@@ -109,6 +109,19 @@
       \field{title}{Cryptocurrency Historical Data}
       \field{year}{2026}
     \endentry
+    \entry{igraph}{online}{}{}
+      \field{sortinit}{i}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labeltitlesource}{title}
+      \field{title}{igraph -- Library for the analysis of networks}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://igraph.org
+      \endverb
+      \verb{url}
+      \verb https://igraph.org
+      \endverb
+    \endentry
     \entry{MagnaniMarzolla2026}{incollection}{}{}
       \name{author}{2}{}{%
         {{hash=515e2eb0c45d461898a35546269464c1}{%
